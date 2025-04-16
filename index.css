@@ -90,10 +90,11 @@ form button:hover {
     background: #47ff6f;
 }
 
-.fa-check, 
+.fa-solid, 
 .fa-trash {
     pointer-events: none;
-}
+    gap: 1rem;
+} 
 
 .completed {
     text-decoration: line-through;
@@ -124,6 +125,7 @@ select {
     color: #ff6f47;
     width: 10rem;
     cursor: pointer;
+    padding: 1rem;
 }
 
 select::after {
@@ -134,4 +136,10 @@ select::after {
     right: 0;
     padding: 1rem;
     pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+select:hover::after {
+    background: #feb47b;
+    color: white;
 }
