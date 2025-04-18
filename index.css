@@ -70,14 +70,14 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 1 s ease; 
+    transition: all 0.5 s ease; 
 }
 
 .todo li {
-    flex: 1;
+    flex: 2;
 }
 
-.trash-btn, complete-btn {
+.trash-btn, .complete-btn {
     background: #ff6f47;
     color: white;
     border: none;
@@ -88,6 +88,10 @@ form button:hover {
 
 .complete-btn {
     background: #47ff6f;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;;
 }
 
 .fa-solid, 
@@ -102,9 +106,8 @@ form button:hover {
 }
 
 .fall {
-    transform: translateY(8rem) rotate(20deg);
+    transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
-
 }
 
 select {
@@ -113,7 +116,7 @@ select {
     appearance: none;
     outline: none;
     border: none;
-}
+} 
 
 .select {
     margin: 1rem;
@@ -121,15 +124,15 @@ select {
     overflow: hidden;
 }
 
-select {
+.select {
     color: #ff6f47;
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
 }
 
-select::after {
-    content: "\25BC";
+.select::after {
+    content: ' \25bc';
     position: absolute;
     background: #ff6f47;
     top: 0;
@@ -139,7 +142,7 @@ select::after {
     transition: all 0.3s ease;
 }
 
-select:hover::after {
-    background: #feb47b;
-    color: white;
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
 }
